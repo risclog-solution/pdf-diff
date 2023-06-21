@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-
-if sys.version_info[0] < 3:
-    sys.exit("ERROR: Python version 3+ is required.")
 
 import json, subprocess, io, os
 from lxml import etree

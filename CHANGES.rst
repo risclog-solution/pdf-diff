@@ -1,0 +1,27 @@
+=======================
+Change log for pdf-diff
+=======================
+
+
+0.9.1+rl2 (unreleased)
+======================
+
+- Make a fresh release from the original source.
+
+
+0.9.1+rl1 (2023-06-20)
+======================
+
+- Fix version syntax.
+
+
+0.9.1.rl0 (2022-??-??)
+======================
+
+- Remove Python 3 guard to allow usage under Python 2
+
+
+0.9.1 (??????????)
+==================
+
+- first release
