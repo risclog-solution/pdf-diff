@@ -1,0 +1,28 @@
+include *.rst
+exclude 3rdparty
+exclude 3rdparty/*
+exclude buildout.cfg
+exclude pytest.ini
+exclude *.yaml
+exclude .isort.cfg
+include *.lock
+include *.py
+include *.txt
+include appenv
+include pytest
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+recursive-include src *.png
+recursive-include src *.eml
+recursive-exclude src *.msg
+recursive-exclude src *.orig
+recursive-exclude src *.pdf
+exclude .editorconfig
+exclude .env
+exclude .coveragerc
+exclude migrate_inbox
+exclude migrated.txt
+exclude migrated.txt.bak
+
