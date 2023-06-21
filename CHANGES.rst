@@ -3,7 +3,7 @@ Change log for pdf-diff
 =======================
 
 
-0.9.1+rl2 (unreleased)
+0.9.1+rl2 (2023-06-21)
 ======================
 
 - Make a fresh release from the original source.
