@@ -3,7 +3,7 @@ Change log for pdf-diff
 =======================
 
 
-0.9.1+rl3 (unreleased)
+0.9.1+rl3 (2023-06-28)
 ======================
 
 - Improve P27 compatability.
