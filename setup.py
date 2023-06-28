@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='pdf-diff',
-      version='0.9.1+rl3',
+      version='0.9.1+rl4.dev0',
       description='Finds differences between two PDF documents',
       long_description=open("README.md").read(),
       long_description_content_type="text/markdown",
