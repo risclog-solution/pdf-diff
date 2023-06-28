@@ -2,6 +2,7 @@
 
 
 import json, subprocess, io, os
+import sys
 from lxml import etree
 from PIL import Image, ImageDraw, ImageOps
 
@@ -64,7 +65,10 @@ def pdf_to_bboxes(pdf_index, fn, top_margin=0, bottom_margin=100):
                        11, 12,
                        14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, ]
 
-    cleaned_xml = bytes([x for x in xml if x not in codes_to_avoid])
+    if sys.version_info[0] > 2:
+        cleaned_xml = bytes([x for x in xml if x not in codes_to_avoid])
+    else:
+        cleaned_xml = xml
 
     dom = etree.fromstring(cleaned_xml)
     for i, page in enumerate(dom.findall(".//{http://www.w3.org/1999/xhtml}page")):
@@ -115,7 +119,14 @@ def mark_eol_hyphen(box):
 
 def perform_diff(doc1text, doc2text):
     import diff_match_patch
-    return diff_match_patch.diff(
+    if sys.version_info[0] == 2:
+        if type(doc1text) is unicode:
+            func = diff_match_patch.diff_unicode
+        else:
+            func = diff_match_patch.diff_str
+    else:
+        func = diff_match_patch.diff
+    return func(
         doc1text,
         doc2text,
         timelimit=0,
